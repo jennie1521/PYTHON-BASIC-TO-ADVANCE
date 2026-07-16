@@ -54,3 +54,86 @@ num2=int(input("enter num 2:"));
 num3=int(input("enter num 3:"));
 avg=(num1+num2+num3)/3
 print(avg)
+
+# check whether a number is even or odd
+def check_even_odd(num):
+    if num%2==0:
+        print("This is Even number")
+    else:
+        print("This is odd number")
+check_even_odd(31);
+check_even_odd(8);
+check_even_odd(101);
+
+#find largest of two numbers
+def find_largest(a,b):
+    if a>b:
+        print(a)
+    else:
+        print(b)
+find_largest(20,30); 
+find_largest(5,98); 
+find_largest(1007,10020);
+
+#find the smallest of three numbers
+def find_smallest(a,b,c):
+    if a<b and a<c:
+        print(a, "is smaller")
+    elif b<a and b<c:
+        print(b, "is smaller")
+    elif c<a and c<b:
+        print(c,"is smaller")
+find_smallest(20,30,15);
+find_smallest(790,80,105);
+find_smallest(26,3,10);
+
+#check whether a number is positive, negative, zero
+def check_number(num):
+    if num>0:
+        print("This is Positive number ")
+    elif num<0:
+        print("This is negative number ")
+    else:
+        print("This is Zero")
+check_number(33);
+check_number(-30);
+check_number(0);
+
+#check whether a year is leap or not
+def check_leap_or_not(year):
+    if (year%4==0 and year%100!=0) or (year%400==0):
+        print(year,"year is leap")
+    else:
+        print(year,"year is not leap")
+check_leap_or_not(1800);
+check_leap_or_not(1600);
+check_leap_or_not(2024);
+
+#check whether a number is divisible by both 5 and 11
+def check_div_by5and11(num):
+    if num%5==0 and num%11==0:
+        print("Divisible by both")
+    else:
+        print("not divisible")
+check_div_by5and11(55);
+check_div_by5and11(10);
+check_div_by5and11(22);
+
+#check a character is vowel or consonant
+def vowel_or_consonant(char):
+    if len(char)==1 and char.isalpha():
+        if char.lower() in 'aeiou':
+            print(char,"is vowel")
+        elif char not in "aeiou":
+            print(char,"is consonant")
+    else:
+        print("invalid")
+vowel_or_consonant('g');
+vowel_or_consonant('u');
+vowel_or_consonant('A');
+
+#find the square and cube of number
+number=int(input("enter the number:"))
+square=number*number
+cube=square*number
+print("the square of",number,"is",square,"and the cube is", cube)
