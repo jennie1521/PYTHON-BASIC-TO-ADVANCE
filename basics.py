@@ -183,3 +183,35 @@ def check_case(char):
 check_case('A');
 check_case('f');
 check_case('Z');
+
+# for loop
+for i in range(1,101):
+    print(i)
+
+for i in range(100,0,-1):
+    print(i)
+
+for i in range(50,0,-1):
+    print(i)
+
+#1-100 odd numbers
+for i in range(1,101):
+    if i%2!=0:
+        print(i) 
+#even numbers
+for i in range(1,101,2):
+    print(i) 
+
+#sum of n natural numbers
+sum=0
+n=10
+for i in range(n+1):
+    sum=sum+i
+print(sum)
+
+#factorial
+fact=1
+n=5
+for i in range(2,n+1):
+    fact=fact*i
+print(fact)
