@@ -137,3 +137,28 @@ number=int(input("enter the number:"))
 square=number*number
 cube=square*number
 print("the square of",number,"is",square,"and the cube is", cube)
+
+
+#check whether a person is eligible to vote
+def check_vote_eligible(age):
+    if age >= 18:
+        print("eligible")
+    else:
+        print("not eligible")
+check_vote_eligible(20);
+check_vote_eligible(10);
+check_vote_eligible(18);
+
+#find grades based on marks
+def grades(marks):
+    if marks >= 90:
+        print("Grade A")
+    elif marks<90 and marks>=75:
+        print("Grade B")
+    elif marks<75 and marks>=45:
+        print("Grade C")
+    elif marks<45:
+        print("Fail")
+grades(78);
+grades(95);
+grades(30);
