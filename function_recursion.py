@@ -22,3 +22,18 @@ def calc_sum(a,b=1): #if only one parameter has to assign no, in that case 2nd p
     sum=a+b
     print(sum)
 calc_sum()
+
+#recursion = fuction calls itself repeatedly
+def show(n):
+    if n==0: #base case, necessery to terminate recursion
+        return
+    print(n)
+    show(n-1)
+show(5)
+
+#factorial
+def fact(n):
+    if (n==0 or n==1):
+        return 1
+    return fact(n-1)*n
+print(fact(5))
