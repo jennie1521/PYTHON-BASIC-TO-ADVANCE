@@ -44,3 +44,37 @@ s2=Students("Tanushri",9.78)
 print(s1.name,s1.marks)
 print(s2.name,s2.marks)
 print(s1.College_name) 
+
+#methods= functions that belongs to objects
+class Students:
+    college_name="adypsoe"
+
+    #constructor
+    def __init__(self,name,marks):
+        self.name=name
+        self.marks=marks
+    #methods
+    def welcome(self):
+        print("welcome,",self.name)
+
+    def get_marks(self): 
+        return self.marks
+
+s1=Students("Janvi",9.33)
+s1.welcome()
+print(s1.get_marks())
+
+#qs1
+class Employees:
+    def __init__(self,name,salary):
+        self.name=name
+        self.salary=salary
+
+    def get_avg(self):
+        sum=0
+        for val in self.salary:
+            sum+=val
+        print(e1.name,"Avg salary is,",sum/3)
+
+e1=Employees("Tanushri",[40000,50000,55000])
+print(e1.get_avg())
