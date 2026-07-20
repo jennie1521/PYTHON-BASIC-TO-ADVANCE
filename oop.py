@@ -78,3 +78,23 @@ class Employees:
 
 e1=Employees("Tanushri",[40000,50000,55000])
 print(e1.get_avg())
+
+#static methods = methods that dont use self parameter , works at class level
+class Students:
+    college_name="adypsoe"
+
+    #constructor
+    def __init__(self,name,marks):
+        self.name=name
+        self.marks=marks
+
+    #static methods
+    @staticmethod  #decorator
+    def welcome():
+        print("welcome")
+
+    def get_marks(self): 
+        return self.marks
+
+s1=Students("Janvi",9.33)
+s1.welcome()
