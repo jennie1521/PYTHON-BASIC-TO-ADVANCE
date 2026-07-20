@@ -29,3 +29,18 @@ print(c1.brand, c1.color)
 
 c2 = Cars("Mercedes","white")
 print(c2.brand, c2.color)
+
+#class attribute and object attribute
+#object attribute has higher preference than class object
+class Students:
+    College_name="Ajeenkya DY Patil" #class sttribute , same for every object
+    name="none" #use when no name data is given 
+    def __init__(self,name,marks):
+        self.name=name #object attribute
+        self.marks=marks
+
+s1=Students("Janvi",9.33)
+s2=Students("Tanushri",9.78)
+print(s1.name,s1.marks)
+print(s2.name,s2.marks)
+print(s1.College_name) 
