@@ -98,3 +98,44 @@ class Students:
 
 s1=Students("Janvi",9.33)
 s1.welcome()
+
+#ABSTRACTION = hiding unneseccery details and showing only essential information
+#ENCAPSULATION = wrapping data and functions into a single unit called object
+class Car:
+    def __init__(self):
+        self.acc=False
+        self.brk=False
+        self.clutch=False
+
+    def start(self):
+        #unnecessery details r hidden
+        self.clutch=True 
+        self.acc=True
+        print("car started..")
+        
+car1 = Car()
+car1.start() #necessery details
+
+#qs2
+class Account:
+    def __init__(self,bal,acc):
+        self.balance=bal
+        self.acc_no=acc
+
+    def debit(self,amount):
+        self.balance -= amount
+        print("Rs.",amount,"Debited feom your acc,",self.acc_no)
+        print("Remaining balance is",self.balance)
+
+    def credit(self,amount):
+        self.balance += amount
+        print("Rs.",amount,"Credited feom your acc,",self.acc_no)
+        print("Current balance is",self.balance)
+
+    def get_bal(self):
+        print(self.balance)
+
+acc1=Account(40000,12345)
+acc1.credit(40000)
+acc1.debit(10000)
+acc1.get_bal()
