@@ -254,3 +254,38 @@ num2.showNumber()
 
 num3 = num1+num2
 num3.showNumber()
+
+#Implement a Simple Student Management System (using OOP)
+# Create a Student class with:
+# name
+# roll_no
+# marks
+# Add methods to:
+# Display student details
+# Calculate average marks
+# Determine Pass/Fail (e.g., pass if average ≥ 40)
+
+class Students:
+    def __init__(self,name,roll_No,Fe,Se,Te):
+        self.name=name
+        self.roll_No=roll_No
+        self.FE=Fe
+        self.SE=Se
+        self.TE=Te
+
+    def display(self):
+        print("Student record is:","Name:",self.name)
+        print("Roll no:",self.roll_No)
+        print("Marks:",self.FE,self.SE,self.TE)
+    
+    def avg(self):
+        avg=(self.FE+self.SE+self.TE)/3
+        print(avg)
+        if avg >= 6:
+            print("Pass")
+        else:
+            print("Fail")
+
+s1=Students("Janvi",4,8.77,8.77,9.33)
+s1.display()
+s1.avg()
