@@ -91,3 +91,35 @@ def partition(arr, low, high):
 arr = [5,8,1,2,6,3,9]
 quick_sort(arr, 0, len(arr)-1)
 print(arr)
+
+#searching algorithms
+#linear search
+class Solutions:
+    def search (nums,target):
+        for i in range(len(nums)):
+            if nums[i]==target:
+                return i
+        return -1
+    
+n1=Solutions.search([2,5,8,4,3,1,9],9)
+print(n1)
+
+#binary search
+#array should be sorted in ascending or descending order
+class Solutions:
+    def search (nums,target):
+        n=len(nums)
+        l=0
+        r=n-1
+
+        while l<=r:
+            mid=(l+r)//2
+            if target==nums[mid]:
+                return mid
+            elif target>nums[mid]:
+                l=mid+1
+            else:
+                r=mid-1
+
+n1=Solutions.search([10,20,30,40,80,90],80)
+print(n1)
